@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* home-container */
+
+.home-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.home-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+}
+header {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+}
+.logo h1{
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.7rem;
+    color: white;
+    margin-left: 20px;
+}
+nav ul {
+    display: flex;
+    gap: 25px;
+    margin-right: 20px;
+}
+nav ul li{
+    cursor: pointer;
+    list-style: none;
+    font-weight: 500;
+    transition: 0.5s ease;
+}
+nav ul li a {
+    transition: 0.5s ease;
+    text-decoration: none;
+    color: black;
+}
+nav ul li a:hover {
+    color: tomato;
+}
+
+/* Cloths-Container */
+.price-ranges select{
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid tomato;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 0 30px rgb(0, 0, 0, 0.2);
+    margin-top: 150px;
+    margin-left: 50px;
+}
+
+.wears {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 50px 0px;
+}
+.dress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    padding: 15px;
+    box-shadow: 0 10px 20px rgb(0, 0, 0, 0.2);
+    background: white;
+    border-radius: 10px;
+}
+#four {
+    display: none;
+}
+.dress-img img{
+    width: 220px;
+    height: 250px;
+}
+.dress-details {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    width: 100%;
+}
+.dress-details h5 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: tomato;
+}
+.dress-details p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+}
+.dress button {
+    cursor: pointer;
+    padding: 10px 20px;
+    width: 100%;
+    background: tomato;
+    border: 2px solid tomato;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 1rem;
+    transition: 0.5s ease;
+}
+.dress button:hover {
+    background: transparent;
+    color: tomato;
+}
+
+/* Notification */
+.notifications {
+    display: none;
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    padding: 10px;
+    max-width: 250px;
+    border: 1px solid rgb(222, 255, 222);
+    transform: translateX(-50%);
+    animation: animate 3s ease;
+}
+.notifications p {
+    color: white;
+    text-align: center;
+}
+@keyframes animate {
+    0% {
+        transform: translateX(-70%);
+        opacity: 0;
+    }50%{
+        transform: translateX(-50%);
+        opacity: 1;
+    }100% {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+}
+
+/* Cart-Container */
+
+.cart-container {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 10px 30px rgb(0, 0, 0, 0.2);
+    right: 0;
+    top: 0;
+    overflow: scroll;
+    padding-bottom: 100px;
+}
+.fa-times {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.order-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    margin-top: 50px;
+}
+.order-details p {
+    font-size: 1rem;
+    font-weight: 600;
+}
+.order-details .order-now {
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    background: tomato;
+    border: 1px solid tomato;
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.5s ease;
+}
+.order-details a:hover{
+    background: rgb(203, 41, 13);
+}
+.dress-cart {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+.dress-cart .dress-img img {
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgb(235, 235, 235);
+    padding: 10px;
+    margin: 10px;
+}
+.cart-description {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+.dress-cart .dress-details h5 {
+    color: black;
+    font-size: 1.2rem;
+}
+.dress-cart .dress-details p {
+    color: rgb(0, 165, 33);
+}
+.quantity-change i {
+    cursor: pointer;
+    width: 20px;
+    height: 30px;
+    color: black;
+    margin-top: 30px;
+}
+.quantity-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    right: 20px;
+}
+.quantity-state p {
+    margin: 0;
+    font-weight: 500;
+}
+.quantity-state i {
+    cursor: pointer;
+    color: tomato;
+}
+
+
+.fa-shopping-cart {
+    font-size: 24px;
+}
+#cart-counter {
+    position: absolute; 
+    color: white; 
+    background: tomato; 
+    width: 20px; 
+    height: 20px; 
+    text-align: center; 
+    border-radius: 50%; 
+    margin-top: -10px; 
+    margin-left: -6px;
+}
+
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 3rem;
+    }
+    .order-details p {
+        font-size: 0.8rem;
+    }
+    .dress-cart p, .order-details .order-now{
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+    .dress-cart .dress-details h5 {
+        font-size: 0.8rem;
+    }
+    .quantity-change i{
+        font-size: 0.7rem;
+        margin-top: 20px;
+    }
+    .fa-trash {
+        margin-top: -10px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .logo h1 {
+        font-size: 2rem;
+        padding: 10px 0px;
+    }
+    .fa-shopping-cart {
+        font-size: 20px;
+    }
+    #cart-counter {
+        width: 15px; 
+        height: 15px; 
+        font-size: 0.7rem;
+    }
+    .dress {
+        width: 200px;
+    }
+    .dress-img img {
+        width: 100px;
+        height: 100px;
+    }
+}

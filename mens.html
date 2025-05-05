@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/images/logo1.png">
+    <link rel="stylesheet" href="../static/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>STYLE'S</title>
+</head>
+<body>
+    <header style="background: white; position: fixed; top: 0; box-shadow: 0 0 30px rgb(0, 0, 0, 0.2); background: white;">
+        <div class="logo">
+            <h1 style="color: tomato;">Style's</h1>
+        </div>
+        <nav>
+            <ul>
+                <li style="position: relative;" onclick="cartShow()">
+                    <p id="cart-counter">0</p>
+                    <i class="fas fa-shopping-cart"></i>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="notifications">
+
+    </div>
+
+    <div class="cart-container">
+        <i class="fas fa-times"></i>
+        <div class="order-details">
+            <p style="font-family:'Courier New', Courier, monospace">Total Cost: ₹0</p>
+            <p onclick="orderNow()" class="order-now">Order Now</p>
+        </div>
+    </div>
+
+    <div class="price-ranges">
+        <select name="price" id="prices">
+            <option value="300-400">300-400</option>
+            <option value="400-500">400-500</option>
+        </select>
+    </div>
+
+    <div class="wears">
+
+    </div>
+
+    <script src="../static/script.js">
+    </script>
+</body>
+</html>

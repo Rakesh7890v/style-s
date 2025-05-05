@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/images/logo1.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../static/login.css">
+    <title>STYLE'S</title>
+</head>
+<body>
+    <header style="background: white; position: fixed; top: 0; box-shadow: 0 0 30px rgb(0, 0, 0, 0.2); background: white;">
+        <div class="logo">
+            <h1 style="color: tomato;">Style's</h1>
+        </div>
+    </header>
+
+    <div class="login-container">
+        <form id="form">
+            <h1>Form</h1>
+            <div class="form-group">
+                <label for="">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter your Name" autocomplete="off" required>
+            </div>
+            <div class="form-group">
+                <label for="">City</label>
+                <input type="text" name="city" id="city" placeholder="Enter your City" autocomplete="off" required>
+            </div>
+            <div class="form-group">
+                <label for="">Phone</label>
+                <input type="tel" name="phone" id="phone" placeholder="Enter your Phone Number" autocomplete="off" maxlength="10" required>
+            </div>
+            <button>Place Order</button>
+        </form>
+    </div>
+    <script src="../static/dataScript.js" type="module"></script>
+</body>
+</html>
